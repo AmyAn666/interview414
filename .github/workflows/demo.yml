@@ -39,4 +39,4 @@ jobs:
               "text": "Demo test"
             }
         env:
-          SLACK_WEBHOOK_URL: "https://hooks.slack.com/services/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"
+          SLACK_WEBHOOK_URL: "https://hooks.slack.com/services/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"
