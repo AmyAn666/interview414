@@ -36,7 +36,7 @@ jobs:
         with:
           payload: |
             {
-              "text": "Demo test"
+              "text": "Demo test!"
             }
         env:
-          SLACK_WEBHOOK_URL: "https://hooks.slack.com/services/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"
+          SLACK_WEBHOOK_URL: "https://hooks.slack.com/services/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"
