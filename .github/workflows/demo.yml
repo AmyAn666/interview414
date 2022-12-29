@@ -1,4 +1,4 @@
-name: Python application
+name: demo CI
 
 on:
   push:
@@ -7,7 +7,7 @@ on:
     branches: [ "main" ]
 
 jobs:
-  build:
+  job1:
     runs-on: ubuntu-latest
 
     steps:
@@ -24,12 +24,11 @@ jobs:
     - name: Test with pytest
       run: |
         pytest --version
-        
-        
-  send_slack_message:
+
+  job2:
     runs-on: ubuntu-latest
-    needs: build
-  
+    needs: job1
+
     steps:
       - name: Send custom JSON data to Slack workflow
         id: slack
@@ -37,8 +36,7 @@ jobs:
         with:
           payload: |
             {
-              "key": "value",
-              "foo": "bar"
+              "text": "Demo test"
             }
         env:
-          SLACK_WEBHOOK_URL: "https://hooks.slack.com/services/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"
+          SLACK_WEBHOOK_URL: "https://hooks.slack.com/services/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"
