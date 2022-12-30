@@ -31,12 +31,8 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
-      - name: print path
-        run: |
-          pwd
-          ls
       - name: Upload Artifacts
         uses: actions/upload-artifact@v2
         with:
           name: artifacts
-          path: /home/runner/work/test/test/requirements.txt
+          path: requirements.txt
