@@ -30,8 +30,11 @@ jobs:
     needs: job1
 
     steps:
+      - name: print path
+        run: |
+          pwd
       - name: Upload Artifacts
         uses: actions/upload-artifact@v2
         with:
           name: artifacts
-          path: requirements.txt
+          path: $(pwd)/requirements.txt
